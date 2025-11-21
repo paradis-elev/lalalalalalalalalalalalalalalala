@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fafafa;
+        }
+
+        header {
+            background: #ff9800;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .cart {
+            position: fixed;
+            top: 15px;
+            right: 20px;
+            background: #fff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            font-size: 18px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .item {
+            background: white;
+            padding: 15px;
+            width: 220px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .item img {
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        button {
+            background: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>Delicious Food Shop</header>
+
+<div class="cart">
+    🛒 Cart: <span id="cartCount">0</span>
+</div>
+
+<div class="container">
+
+    <div class="item">
+        <img src="https://via.placeholder.com/200?text=Burger" alt="Burger">
+        <h3>Burger</h3>
+        <p>$5.99</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <img src="https://via.placeholder.com/200?text=Pizza" alt="Pizza">
+        <h3>Pizza Slice</h3>
+        <p>$3.49</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <div class="item">
+        <img src="https://via.placeholder.com/200?text=Sandwich" alt="Sandwich">
+        <h3>Sandwich</h3>
+        <p>$4.25</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+</div>
+
+<script>
+    let cartCount = 0;
+
+    function addToCart() {
+        cartCount++;
+        document.getElementById("cartCount").innerText = cartCount;
+    }
+</script>
+
+</body>
+</html>
